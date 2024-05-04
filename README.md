@@ -10,45 +10,37 @@
 > 배포 주소: [푸디로그](https://www.foodielog.shop/) <br/>
 > 테스트용 ID: boo2@gmail.com , PW: boo1234!
 
+## 사용 기술 및 선택 이유
 
-## 사용 기술
+### Next.js
 
-**Development**
+---
 
-<p>
-<img src="https://img.shields.io/badge/NEXT.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" />
-<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=TypeScript&logoColor=white" />
-<img src="https://img.shields.io/badge/Tailwindcss-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" />
-<img src="https://img.shields.io/badge/Zustand-43B02A?style=flat-square&logo=Zustand&logoColor=white" />
-<img src="https://img.shields.io/badge/React Query-FF4154?style=flat-square&logo=reactquery&logoColor=white" />
-<br />
-</p>
+서버 사이드 렌더링(SSR), 정적 사이트 생성(Static Site Generation, SSG), 그리고 클라이언트 사이드 렌더링(Client-Side Rendering, CSR)을 지원하는 React 프레임워크입니다. 이를 통해 애플리케이션의 SEO(검색 엔진 최적화) 성능을 개선하고, 빠른 로딩 속도와 더 나은 초기 렌더링 성능을 제공할 수 있습니다. 또한, App Router 방식을 사용해서 폴더 단위로 페이지 구성을 할 수 있습니다. 
 
-**Infrastructure**
+### Typescript
 
-<p>
-<img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=Vercel&logoColor=white" />
-<img src="https://img.shields.io/badge/NPM-CB3837?style=flat-square&logo=npm&logoColor=white"/>
-<img src="https://img.shields.io/badge/VSCode-007ACC?style=flat-square&logo=Visual Studio Code&logoColor=white"/>
-</p>
+---
 
-**Cowork Tools**
+TypeScript는 JavaScript 생태계와 호환성이 뛰어나 다양한 라이브러리와 도구를 쉽게 활용할 수 있습니다. 개발 중에 타입 체크를 통해 오류를 미리 발견할 수 있으며,  자동 완성으로 좀더 편리하게 개발할 수 있습니다. 
 
-<p>
-<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white"/>
-<img src="https://img.shields.io/badge/Discord-5865F2?style=flat-square&logo=discord&logoColor=white" />
-<img src="https://img.shields.io/badge/Notion-000000?style=flat-square&logo=Notion&logoColor=white" />
-<img src="https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white" />
-</p>
+### React-Query
 
-## 기능 소개
-![푸디로그-1](https://github.com/FoodieLog/foodie-log-client/assets/128155681/adaabaf1-74fe-47c4-a686-d22eb0a7afcf)
-![푸디로그-2](https://github.com/FoodieLog/foodie-log-client/assets/128155681/ac28a80c-adc0-4e3a-954e-f70e12c20808)
-![푸디로그-3](https://github.com/FoodieLog/foodie-log-client/assets/128155681/6ebafc47-f18b-43be-a35c-366058399062)
-![푸디로그-4](https://github.com/FoodieLog/foodie-log-client/assets/128155681/21ba647b-5557-4b8f-a2e4-41fd2941d30e)
-![푸디로그-5](https://github.com/FoodieLog/foodie-log-client/assets/128155681/f21d0883-a352-48f1-9ba0-74501ee7800e)
-![푸디로그-6](https://github.com/FoodieLog/foodie-log-client/assets/128155681/f7e832eb-23fc-4e69-acbc-da1a6ead8343)
-![푸디로그-7](https://github.com/FoodieLog/foodie-log-client/assets/128155681/d9c17065-3827-4f49-a357-fefca0d790d3)
+---
+
+useInfiniteQuery를 사용해 피드 페이지를 무한 스크롤로 구현할 수 있고, 데이터 페칭, 캐싱, 동기화, 업데이트를 쉽게 처리하기 위해서 선택하였습니다. 서버로부터 데이터를 효율적으로 불러오고, 자동으로 캐싱하여 애플리케이션의 성능을 개선합니다. 데이터가 변경될 때 자동으로 데이터를 다시 가져오고 캐시를 무효화하는 기능을 제공합니다. 데이터 로딩과 에러 처리를 쉽게 구현할 수 있게 도와줍니다.
+
+### Zustand
+
+---
+
+작은 패키지 크기과 쉬운 사용 방법으로 프로젝트에 사용하기 좋았습니다. 여러 컴포넌트에서 사용자의 입력 상태를 유지하거나 사용자 데이터를 전역적으로 관리할 때 사용하였습니다. Persist 미들웨어 웹 스토리지에 데이터를 저장할 때 간단한 설정으로 적용할 수 있어서 좋았습니다.
+
+### Tailwind CSS
+
+---
+
+유틸리티 클래스를 통해 스타일을 쉽게 조정할 수 있고, 반응형 디자인도 빠르게 구현할 수 있습니다. 스타일 코드도 HTML 코드 안에 있기 때문에 HTML와 CSS 파일을 별도로 관리할 필요가 없습니다. 또한 className 속성에 직접 스타일을 넣어, 클래스명을 고민할 필요가 없다는 점이 좋았습니다. 스타일 값을 자유롭게 커스텀할 수 있습니다.  **자동완성, 신택스 하이라이팅, 린팅을 지원해서 편리하게 개발할 수 있었습니다.**
 
 ## 개발팀
 > 🧑‍💻 [프론트엔드](https://github.com/FoodieLog/foodie-log-client/) <br/>
